@@ -10,9 +10,10 @@
             }
         },
         "widgets": {
-            "item-detail": {
-                "title": "Customer reviews"
-            }
+          "item-detail": {
+            "title": "Customer reviews",
+            "rating": "Rating"
+          }
         }
     }
 }
