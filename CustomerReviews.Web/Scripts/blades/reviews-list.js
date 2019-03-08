@@ -28,13 +28,13 @@ angular.module('CustomerReviews.Web')
                     currentEntityId: data.id,
                     currentEntity: data,
                     title: data.name,
-                    controller: 'virtoCommerce.storeModule.storeDetailController',
-                    template: 'Modules/$(VirtoCommerce.Store)/Scripts/blades/store-detail.tpl.html'
+                    controller: 'CustomerReviews.Web.reviewDetailsController',
+                    template: 'Modules/$(CustomerReviews.Web)/Scripts/blades/review-details.tpl.html'
                 };
                 bladeNavigationService.showBlade(newBlade, blade);
             }
 
-            function openBladeNew() {
+            /*function openBladeNew() {
                 $scope.selectedNodeId = null;
 
                 var newBlade = {
@@ -46,7 +46,7 @@ angular.module('CustomerReviews.Web')
                     template: 'Modules/$(VirtoCommerce.Store)/Scripts/wizards/newStore/new-store-wizard.tpl.html'
                 };
                 bladeNavigationService.showBlade(newBlade, blade);
-            }
+            }*/
 
             blade.headIcon = 'fa-comments';
 

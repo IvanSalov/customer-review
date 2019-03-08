@@ -25,7 +25,7 @@ namespace CustomerReviews.Web.Controllers.Api
         /// <returns></returns>
         [HttpGet]
         [ResponseType(typeof(ProductRating))]
-        [Route("product/{productId}/rating")]
+        [Route("api/product/{productId}/rating")]
         public IHttpActionResult GetProductRating(string productId)
         {
             var rating = _productRatingService.GetProductRatingByProductId(productId);

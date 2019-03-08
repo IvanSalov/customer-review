@@ -117,8 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Localizations\en.customerReviews.json" />
+    <Content Include="Scripts\blades\review-details.js" />
+    <Content Include="Scripts\blades\review-details.tpl.html" />
     <Content Include="Scripts\widgets\customerReviewWidget.js" />
     <Content Include="Scripts\widgets\customerReviewWidget.tpl.html" />
+    <Content Include="Scripts\widgets\productRatingWidget.js" />
+    <Content Include="Scripts\widgets\productRatingWidget.tpl.html" />
     <None Include="module.ignore" />
     <None Include="packages.config" />
     <None Include="Content\help\index.html" />

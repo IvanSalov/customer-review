@@ -1,10 +1,34 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿<div class="blade-content">
+    <div class="blade-inner">
+        <div class="form-group">
+            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.authorNickname' | translate }}</label>
+            <div class="form-input">
+                <input readonly="readonly" class="form-control" ng-model="blade.data.authorNickname" name="authorNickname" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.dateCreated' | translate }}</label>
+            <div class="form-input">
+                <input readonly="readonly" class="form-control" ng-model="blade.data.createdDate" name="createdDate" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.dateModified' | translate }}</label>
+            <div class="form-input">
+                <input readonly="readonly" class="form-control" ng-model="blade.data.modifiedDate" name="modifiedDate" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.content' | translate }}</label>
+            <div class="form-input">
+                <textarea class="__small" readonly="readonly" required cols="30" rows="3" ng-model="blade.data.content" name="reviewContent"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.product' | translate }}</label>
+            <div class="form-input">
+                <a ng-click="blade.openProduct()">{{ blade.item.name }}</a>
+            </div>
+        </div>
+    </div>
+</div>

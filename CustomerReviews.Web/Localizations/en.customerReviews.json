@@ -1,13 +1,27 @@
 {
     "customerReviews": {
         "blades": {
-            "review-list": {
-                "labels": {
-                    "content": "Content",
-                    "modifiedDate": "Last updated",
-                    "no-review": "No Customer Reviews found"
-                }
+          "review-list": {
+            "labels": {
+              "content": "Content",
+              "modifiedDate": "Last updated",
+              "no-review": "No Customer Reviews found"
             }
+          },
+          "review-details": {
+            "labels": {
+              "content": "Content",
+              "authorNickname": "Author's nickname",
+              "dateCreated": "Created",
+              "dateModified": "Modified",
+              "assessments": "Review assessments",
+              "product":  "Product"
+            },
+            "assessmentsColumns": {
+              "author": "Author",
+              "dateAssessed": "Date"
+            }
+          }
         },
         "widgets": {
           "item-detail": {
