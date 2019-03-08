@@ -1,34 +1,50 @@
 ﻿<div class="blade-content">
     <div class="blade-inner">
-        <div class="form-group">
-            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.authorNickname' | translate }}</label>
-            <div class="form-input">
-                <input readonly="readonly" class="form-control" ng-model="blade.data.authorNickname" name="authorNickname" />
+        <div class="inner-block">
+            <div class="form-group">
+                <label class="form-label">{{ 'customerReviews.blades.review-details.labels.authorNickname' | translate }}</label>
+                <div class="form-input">
+                    <input readonly="readonly" class="form-control" ng-model="blade.data.authorNickname" name="authorNickname" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">{{ 'customerReviews.blades.review-details.labels.dateCreated' | translate }}</label>
+                <div class="form-input">
+                    <input readonly="readonly" class="form-control" ng-model="blade.data.createdDate" name="createdDate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">{{ 'customerReviews.blades.review-details.labels.dateModified' | translate }}</label>
+                <div class="form-input">
+                    <input readonly="readonly" class="form-control" ng-model="blade.data.modifiedDate" name="modifiedDate" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">{{ 'customerReviews.blades.review-details.labels.content' | translate }}</label>
+                <div class="form-input">
+                    <textarea class="__small" readonly="readonly" required cols="30" rows="3" ng-model="blade.data.content" name="reviewContent"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">{{ 'customerReviews.blades.review-details.labels.product' | translate }}</label>
+                <div class="form-input">
+                    <a ng-click="blade.openProduct()">{{ blade.item.name }}</a>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.dateCreated' | translate }}</label>
-            <div class="form-input">
-                <input readonly="readonly" class="form-control" ng-model="blade.data.createdDate" name="createdDate" />
+        <div class="inner-block">
+            <h4>{{ 'customerReviews.blades.review-details.labels.assessments' | translate }}</h4>
+            <div class="table-wrapper" ng-init="setGridOptions({
+                    useExternalSorting: true,
+                    rowTemplate: 'list.row.html',
+                    data: 'blade.data.customerReviewAssessments',
+                    columnDefs: [
+                                { name: 'isLike' },
+                                { name: 'authorNickname', displayName: 'customerReviews.blades.review-details.assessmentsColumns.author' }
+                        ]})">
+                <div ui-grid="gridOptions" ui-grid-auto-resize ui-grid-save-state ui-grid-resize-columns ui-grid-move-columns ui-grid-pinning ui-grid-height></div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.dateModified' | translate }}</label>
-            <div class="form-input">
-                <input readonly="readonly" class="form-control" ng-model="blade.data.modifiedDate" name="modifiedDate" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.content' | translate }}</label>
-            <div class="form-input">
-                <textarea class="__small" readonly="readonly" required cols="30" rows="3" ng-model="blade.data.content" name="reviewContent"></textarea>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="form-label">{{ 'customerReviews.blades.review-details.labels.product' | translate }}</label>
-            <div class="form-input">
-                <a ng-click="blade.openProduct()">{{ blade.item.name }}</a>
-            </div>
+            <p class="note" ng-if="!assessments.length">{{ 'customerReviews.blades.review-details.labels.no-assessment' | translate }}</p>
         </div>
     </div>
 </div>

@@ -9,13 +9,15 @@
             }
           },
           "review-details": {
+            "title":  "Review",
             "labels": {
               "content": "Content",
               "authorNickname": "Author's nickname",
               "dateCreated": "Created",
               "dateModified": "Modified",
               "assessments": "Review assessments",
-              "product":  "Product"
+              "product": "Product",
+              "no-assessment": "No assessments",
             },
             "assessmentsColumns": {
               "author": "Author",

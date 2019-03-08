@@ -1,10 +1,11 @@
 ﻿angular.module('CustomerReviews.Web')
-    .controller('CustomerReviews.Web.reviewDetailsController', ['$scope', 'CustomerReviews.WebApi', 'platformWebApp.bladeUtils', 'uiGridConstants', 'platformWebApp.uiGridHelper',
-        function ($scope, reviewsApi, bladeUtils, uiGridConstants, uiGridHelper) {
+    .controller('CustomerReviews.Web.reviewDetailsController', ['$scope', 'CustomerReviews.WebApi', 'platformWebApp.bladeUtils', 'uiGridConstants', 'platformWebApp.uiGridHelper', '$filter',
+        function ($scope, reviewsApi, bladeUtils, uiGridConstants, uiGridHelper, $filter) {
             $scope.uiGridConstants = uiGridConstants;
             var bladeNavigationService = bladeUtils.bladeNavigationService;
 
             var blade = $scope.blade;
+            blade.title = $filter("translate")('customerReviews.blades.review-details.title');
 
             blade.refresh = function () {
                 blade.isLoading = true;
