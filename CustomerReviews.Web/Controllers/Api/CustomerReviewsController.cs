@@ -92,6 +92,7 @@ namespace CustomerReviews.Web.Controllers.Api
         [HttpPost]
         [Route("{reviewId}/assessment")]
         [ResponseType(typeof(void))]
+        [CheckPermission(Permission = PredefinedPermissions.CustomerRevewAssessmentCreate)]
         public IHttpActionResult AddAssessment([FromUri]string reviewId, CustomerReviewAssessmentRequest assessment)
         {
             _customerReviewService.AddCustomerReviewAssessment(reviewId, assessment);
@@ -108,6 +109,7 @@ namespace CustomerReviews.Web.Controllers.Api
         [HttpDelete]
         [Route("{reviewId}/assessment/{assessmentId}")]
         [ResponseType(typeof(void))]
+        [CheckPermission(Permission = PredefinedPermissions.CustomerRevewAssessmentDelete)]
         public IHttpActionResult DeleteAssessment([FromUri]string reviewId, string assessmentId)
         {
             _customerReviewService.DeleteCustomerReviewAssessment(reviewId, assessmentId);
