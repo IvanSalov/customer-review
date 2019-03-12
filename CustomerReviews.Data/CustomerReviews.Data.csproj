@@ -76,13 +76,9 @@
     <Compile Include="Migrations\201810051551355_Initial.Designer.cs">
       <DependentUpon>201810051551355_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903061711379_AddCustomerReviewAssessment.cs" />
-    <Compile Include="Migrations\201903061711379_AddCustomerReviewAssessment.Designer.cs">
-      <DependentUpon>201903061711379_AddCustomerReviewAssessment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903070634586_AddProductRatingEntity.cs" />
-    <Compile Include="Migrations\201903070634586_AddProductRatingEntity.Designer.cs">
-      <DependentUpon>201903070634586_AddProductRatingEntity.cs</DependentUpon>
+    <Compile Include="Migrations\201903121221501_AddCustomerReviewAssessmentAndProductRating.cs" />
+    <Compile Include="Migrations\201903121221501_AddCustomerReviewAssessmentAndProductRating.Designer.cs">
+      <DependentUpon>201903121221501_AddCustomerReviewAssessmentAndProductRating.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\CustomerReviewAssessmentEntity.cs" />
@@ -108,15 +104,14 @@
     <EmbeddedResource Include="Migrations\201810051551355_Initial.resx">
       <DependentUpon>201810051551355_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903061711379_AddCustomerReviewAssessment.resx">
-      <DependentUpon>201903061711379_AddCustomerReviewAssessment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903070634586_AddProductRatingEntity.resx">
-      <DependentUpon>201903070634586_AddProductRatingEntity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903121221501_AddCustomerReviewAssessmentAndProductRating.resx">
+      <DependentUpon>201903121221501_AddCustomerReviewAssessmentAndProductRating.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

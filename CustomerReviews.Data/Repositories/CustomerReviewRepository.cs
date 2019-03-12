@@ -37,6 +37,7 @@ namespace CustomerReviews.Data.Repositories
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CustomerReviewEntity>().ToTable("CustomerReview").HasKey(x => x.Id).Property(x => x.Id);
+            modelBuilder.Entity<CustomerReviewAssessmentEntity>().ToTable("CustomerReviewAssessment").HasKey(x => x.Id).Property(x => x.Id);
 
             base.OnModelCreating(modelBuilder);
         }

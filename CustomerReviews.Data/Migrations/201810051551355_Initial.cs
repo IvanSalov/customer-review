@@ -20,7 +20,6 @@ namespace CustomerReviews.Data.Migrations
                         ModifiedDate = c.DateTime(),
                         CreatedBy = c.String(maxLength: 64),
                         ModifiedBy = c.String(maxLength: 64),
-                        Value = c.Short(nullable: false)
                     })
                 .PrimaryKey(t => t.Id);
             

@@ -24,7 +24,7 @@ namespace CustomerReviews.Data.Repositories
         {
             return ProductRatings.FirstOrDefault(p => p.ProductId == productId);
         }
-        
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductRatingEntity>().ToTable("ProductRating").HasKey(x => x.Id).Property(x => x.Id);
