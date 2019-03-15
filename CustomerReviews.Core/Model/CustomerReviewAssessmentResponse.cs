@@ -11,5 +11,7 @@ namespace CustomerReviews.Core.Model
         public bool IsLike { get; set; }
 
         public DateTime CreatedDate { get; set; }
+
+        public string CreatedBy { get; set; }
     }
 }

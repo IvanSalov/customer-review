@@ -36,6 +36,7 @@ namespace CustomerReviews.Data.Model
 
             model.Id = Id;
             model.CreatedDate = CreatedDate;
+            model.CreatedBy = CreatedBy;
             model.IsLike = IsLike;
             model.AuthorNickname = AuthorNickname;
 
