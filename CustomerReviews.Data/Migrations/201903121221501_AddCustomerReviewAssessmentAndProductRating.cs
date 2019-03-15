@@ -21,7 +21,7 @@ namespace CustomerReviews.Data.Migrations
                         ModifiedBy = c.String(maxLength: 64),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.CustomerReview", t => t.CustomerReviewId)
+                .ForeignKey("dbo.CustomerReview", t => t.CustomerReviewId, cascadeDelete: true)
                 .Index(t => t.CustomerReviewId);
 
             CreateTable(

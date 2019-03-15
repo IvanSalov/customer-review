@@ -22,7 +22,7 @@ namespace CustomerReviews.Data.Repositories
 
         public CustomerReviewEntity[] GetByIds(string[] ids)
         {
-            return CustomerReviews.Where(x => ids.Contains(x.Id)).ToArray();
+            return CustomerReviews.Include(r => r.CustomerReviewAssessments).Where(x => ids.Contains(x.Id)).ToArray();
         }
 
         public void DeleteCustomerReviews(string[] ids)

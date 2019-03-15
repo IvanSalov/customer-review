@@ -5,6 +5,6 @@ namespace CustomerReviews.Core.Services
 {
     public interface ICustomerReviewSearchService
     {
-        GenericSearchResult<CustomerReviewBrief> SearchCustomerReviews(CustomerReviewSearchCriteria criteria);
+        GenericSearchResult<CustomerReviewDetailed> SearchCustomerReviews(CustomerReviewSearchCriteria criteria);
     }
 }

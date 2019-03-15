@@ -30,7 +30,7 @@ namespace CustomerReviews.Web.Controllers.Api
         /// </summary>
         [HttpPost]
         [Route("search")]
-        [ResponseType(typeof(GenericSearchResult<CustomerReviewBrief>))]
+        [ResponseType(typeof(GenericSearchResult<CustomerReviewDetailed>))]
         [CheckPermission(Permission = PredefinedPermissions.CustomerReviewRead)]
         public IHttpActionResult SearchCustomerReviews(CustomerReviewSearchCriteria criteria)
         {

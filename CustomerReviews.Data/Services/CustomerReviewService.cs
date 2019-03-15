@@ -22,11 +22,11 @@ namespace CustomerReviews.Data.Services
             _productRatingRepositoryFactory = productRatingRepositoryFactory;
         }
 
-        public CustomerReviewBrief[] GetByIds(string[] ids)
+        public CustomerReviewDetailed[] GetByIds(string[] ids)
         {
             using (var repository = _customerReviewRepositoryFactory())
             {
-                return repository.GetByIds(ids).Select(x => x.ToBriefModel(AbstractTypeFactory<CustomerReviewBrief>.TryCreateInstance())).ToArray();
+                return repository.GetByIds(ids).Select(x => x.ToDetailedModel(AbstractTypeFactory<CustomerReviewDetailed>.TryCreateInstance())).ToArray();
             }
         }
 

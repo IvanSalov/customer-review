@@ -20,14 +20,14 @@ namespace CustomerReviews.Data.Services
             _customerReviewService = customerReviewService;
         }
 
-        public GenericSearchResult<CustomerReviewBrief> SearchCustomerReviews(CustomerReviewSearchCriteria criteria)
+        public GenericSearchResult<CustomerReviewDetailed> SearchCustomerReviews(CustomerReviewSearchCriteria criteria)
         {
             if (criteria == null)
             {
                 throw new ArgumentNullException($"{ nameof(criteria) } must be set");
             }
 
-            var retVal = new GenericSearchResult<CustomerReviewBrief>();
+            var retVal = new GenericSearchResult<CustomerReviewDetailed>();
 
             using (var repository = _repositoryFactory())
             {

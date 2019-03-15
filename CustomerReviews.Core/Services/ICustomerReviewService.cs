@@ -4,7 +4,7 @@ namespace CustomerReviews.Core.Services
 {
     public interface ICustomerReviewService
     {
-        CustomerReviewBrief[] GetByIds(string[] ids);
+        CustomerReviewDetailed[] GetByIds(string[] ids);
 
         void SaveCustomerReviews(CustomerReviewRequest[] items);
 
